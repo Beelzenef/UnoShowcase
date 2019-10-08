@@ -18,11 +18,12 @@
                 Grid.Row="0"
                 Click="GoBack_Click"/>
 
-        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" Width="500">
+        <ScrollViewer Grid.Row="1" Margin="20" Width="500">
             
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center"
-                        Width="500">
+                        Width="500"
+                        Padding="20">
             
                 <TextBlock Text="Textboxes"/>
 
@@ -74,6 +75,26 @@
                 
                 <ProgressRing IsActive="False"/>
                 <ProgressRing IsActive="True"/>
+
+                <TextBlock Text="Date picker"/>
+
+                <DatePicker Header="Select date"
+                            HorizontalAlignment="Center"/>
+                <DatePicker Header="Select days"
+                            HorizontalAlignment="Center"
+                            YearVisible="False"/>
+                <DatePicker Header="Select day"
+                            DayFormat="{}{day.integer} {dayofweek.full}"
+                            YearVisible="False"
+                            HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Calendar"/>
+
+                <CalendarDatePicker Height="50"
+                                    Width="200"
+                                    Header="Select a date"
+                                    PlaceholderText="No date selected"
+                                    HorizontalAlignment="Center"/>
 
             </StackPanel>
         </ScrollViewer>
