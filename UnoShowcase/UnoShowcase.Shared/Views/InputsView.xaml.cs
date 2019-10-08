@@ -3,9 +3,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace UnoShowcase.Shared.Views
 {
-    public sealed partial class ButtonsView : Page
+    public sealed partial class InputsView : Page
     {
-        public ButtonsView()
+        public InputsView()
         {
             this.InitializeComponent();
         }

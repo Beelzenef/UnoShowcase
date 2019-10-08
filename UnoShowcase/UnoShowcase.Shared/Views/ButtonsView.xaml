@@ -9,32 +9,55 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
         <Button Content="Back"
+                Grid.Row="0"
                 Click="GoBack_Click"/>
 
-        <StackPanel HorizontalAlignment="Center"
-                    VerticalAlignment="Center">
-            <Button Content="Im a button!"/>
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" Width="500">
             
-            <TextBlock Text="Checkboxes"/>
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="500">
             
-            <CheckBox Content="Checkbox1"/>
-            <CheckBox Content="Checkbox2" IsChecked="True" IsEnabled="False"/>
-            <CheckBox Content="Checkbox3" IsChecked="False" IsEnabled="False"/>
+                <TextBlock Text="Buttons"/>
 
-            <TextBlock Text="ToggleButtons"/>
+                <Button Content="Im a button!"
+                        HorizontalAlignment="Center"/>
+                <Button Content="Disabled button"
+                        HorizontalAlignment="Center"
+                        IsEnabled="False"/>
 
-            <ToggleButton Content="ToggleButton1" IsEnabled="True"/>
-            <ToggleButton Content="ToggleButton2" IsEnabled="False" IsChecked="True"/>
-            <ToggleButton Content="ToggleButton3" IsEnabled="False" IsChecked="False"/>
-            
-            <TextBlock Text="ToggleSwitch"/>
+                <TextBlock Text="Checkboxes"/>
 
-            <ToggleSwitch/>
-            <ToggleSwitch IsOn="True" IsEnabled="False"/>
-            <ToggleSwitch IsOn="False" IsEnabled="False"/>
+                <CheckBox Content="Checkbox1" HorizontalAlignment="Center"/>
+                <CheckBox Content="Checkbox2" IsChecked="True" IsEnabled="False"
+                          HorizontalAlignment="Center"/>
+                <CheckBox Content="Checkbox3" IsChecked="False" IsEnabled="False"
+                          HorizontalAlignment="Center"/>
 
-        </StackPanel>
+                <TextBlock Text="ToggleButtons"/>
+
+                <ToggleButton Content="ToggleButton1" IsEnabled="True"
+                              HorizontalAlignment="Center"/>
+                <ToggleButton Content="ToggleButton2" IsEnabled="False" IsChecked="True"
+                              HorizontalAlignment="Center"/>
+                <ToggleButton Content="ToggleButton3" IsEnabled="False" IsChecked="False"
+                              HorizontalAlignment="Center"/>
+
+                <TextBlock Text="ToggleSwitch"/>
+
+                <ToggleSwitch HorizontalAlignment="Center"/>
+                <ToggleSwitch IsOn="True" IsEnabled="False"
+                              HorizontalAlignment="Center"/>
+                <ToggleSwitch IsOn="False" IsEnabled="False"
+                              HorizontalAlignment="Center"/>
+
+            </StackPanel>
+        </ScrollViewer>
     </Grid>
 </Page>

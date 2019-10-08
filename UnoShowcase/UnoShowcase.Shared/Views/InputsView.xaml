@@ -1,0 +1,81 @@
+﻿<Page
+    x:Class="UnoShowcase.Shared.Views.InputsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoShowcase.Shared.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Back"
+                Grid.Row="0"
+                Click="GoBack_Click"/>
+
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" Width="500">
+            
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="500">
+            
+                <TextBlock Text="Textboxes"/>
+
+                <TextBox Width="200"
+                         Height="100"
+                         HorizontalAlignment="Center"/>
+                <RichTextBlock Width="200"
+                               Height="100"
+                               IsTextSelectionEnabled="True"
+                               HorizontalAlignment="Center">
+                    <Paragraph>
+                        Rich text box content
+                    </Paragraph>
+                </RichTextBlock>
+
+                <TextBlock Text="Sliders"/>
+
+                <Slider Value="30"
+                        Maximum="100"
+                        Orientation="Horizontal"
+                        Width="200"
+                        HorizontalAlignment="Center"/>
+                <Slider Value="70"
+                        Maximum="100"
+                        Orientation="Horizontal"
+                        Width="200"
+                        IsEnabled="False"
+                        HorizontalAlignment="Center"/>
+
+                <TextBlock Text="Progress bars"/>
+
+                <ProgressBar Value="30"
+                             Maximum="100"
+                             Width="200"
+                             Height="20"
+                             HorizontalAlignment="Center"/>
+                <ProgressBar Value="100"
+                             Maximum="100"
+                             Width="200"
+                             Height="20"
+                             HorizontalAlignment="Center"/>
+                <ProgressBar Value="30"
+                             Maximum="100"
+                             IsEnabled="False"
+                             HorizontalAlignment="Center"/>
+                <TextBlock Text="There's a third progress bar over me, disabled!"/>
+
+                <TextBlock Text="Progress rings"/>
+                
+                <ProgressRing IsActive="False"/>
+                <ProgressRing IsActive="True"/>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

@@ -18,7 +18,7 @@ namespace UnoShowcase
 
         private void GoInputs_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(InputsView));
         }
 
         private void GoButtons_Click(object sender, RoutedEventArgs e)
