@@ -1,0 +1,40 @@
+﻿<Page
+    x:Class="UnoShowcase.Shared.Views.ButtonsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoShowcase.Shared.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        
+        <Button Content="Back"
+                Click="GoBack_Click"/>
+
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <Button Content="Im a button!"/>
+            
+            <TextBlock Text="Checkboxes"/>
+            
+            <CheckBox Content="Checkbox1"/>
+            <CheckBox Content="Checkbox2" IsChecked="True" IsEnabled="False"/>
+            <CheckBox Content="Checkbox3" IsChecked="False" IsEnabled="False"/>
+
+            <TextBlock Text="ToggleButtons"/>
+
+            <ToggleButton Content="ToggleButton1" IsEnabled="True"/>
+            <ToggleButton Content="ToggleButton2" IsEnabled="False" IsChecked="True"/>
+            <ToggleButton Content="ToggleButton3" IsEnabled="False" IsChecked="False"/>
+            
+            <TextBlock Text="ToggleSwitch"/>
+
+            <ToggleSwitch/>
+            <ToggleSwitch IsOn="True" IsEnabled="False"/>
+            <ToggleSwitch IsOn="False" IsEnabled="False"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
