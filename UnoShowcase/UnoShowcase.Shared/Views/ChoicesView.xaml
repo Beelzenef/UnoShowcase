@@ -1,0 +1,52 @@
+﻿<Page
+    x:Class="UnoShowcase.Shared.Views.ChoicesView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:UnoShowcase.Shared.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Button Content="Back"
+                Grid.Row="0"
+                Click="GoBack_Click"/>
+
+        <ScrollViewer Grid.Row="1" Margin="0,0,0,0" Width="500">
+
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Width="500">
+
+                <TextBlock Text="Combo box"/>
+
+                <ComboBox Header="Colors"
+                          Width="200"
+                          PlaceholderText="Select color"
+                          HorizontalAlignment="Center">
+                    <x:String>Blue</x:String>
+                    <x:String>Green</x:String>
+                    <x:String>Red</x:String>
+                    <x:String>Yellow</x:String>
+                </ComboBox>
+
+                <TextBlock Text="Radio buttons"/>
+
+                <StackPanel Orientation="Vertical"
+                            HorizontalAlignment="Center">
+                    <RadioButton Content="Green" Tag="Green"/>
+                    <RadioButton Content="Yellow" Tag="Yellow"/>
+                    <RadioButton Content="Blue" Tag="Blue" IsEnabled="False"/>
+                    <RadioButton Content="White" Tag="White" IsChecked="True"/>
+                </StackPanel>
+
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Page>

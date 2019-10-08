@@ -24,6 +24,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)Views\ButtonsView.xaml.cs">
       <DependentUpon>ButtonsView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="$(MSBuildThisFileDirectory)Views\ChoicesView.xaml.cs">
+      <DependentUpon>ChoicesView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Views\InputsView.xaml.cs">
       <DependentUpon>InputsView.xaml</DependentUpon>
     </Compile>
@@ -34,6 +37,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="$(MSBuildThisFileDirectory)Views\ButtonsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="$(MSBuildThisFileDirectory)Views\ChoicesView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

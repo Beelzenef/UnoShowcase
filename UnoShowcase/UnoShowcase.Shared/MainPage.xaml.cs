@@ -13,7 +13,7 @@ namespace UnoShowcase
 
         private void GoChoices_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Navigate(typeof(ChoicesView));
         }
 
         private void GoInputs_Click(object sender, RoutedEventArgs e)
